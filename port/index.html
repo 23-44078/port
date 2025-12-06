@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justin Marc D. Datinguinoo — Web Developer Portfolio</title>
     <meta name="description" content="Portfolio of Justin Marc D. Datinguinoo — Web Developer specializing in modern web applications">
-    <meta name="keywords" content="web developer, frontend, javascript, react, portfolio">
+    <meta name="keywords" content="web developer, frontend, javascript, portfolio">
     <meta name="author" content="Justin Marc D. Datinguinoo">
     
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Justin Marc D. Datinguinoo — Web Developer">
     <meta property="og:description" content="Portfolio showcasing web development projects and skills">
     <meta property="og:type" content="website">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -199,19 +196,7 @@
             gap: 12px;
         }
 
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            color: white;
-            box-shadow: var(--shadow);
-            font-size: 18px;
-        }
+        /* Logo icon removed from here */
 
         .logo-text h1 {
             font-size: 18px;
@@ -302,6 +287,7 @@
         .btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
             padding: 12px 24px;
             border-radius: var(--border-radius-sm);
@@ -314,6 +300,7 @@
             outline: none;
             position: relative;
             overflow: hidden;
+            text-align: center;
         }
 
         .btn::before {
@@ -354,6 +341,17 @@
         .btn-outline:hover {
             background: rgba(255, 255, 255, 0.05);
             border-color: var(--primary);
+        }
+
+        .btn-success {
+            background: linear-gradient(90deg, var(--success), #0da271);
+            color: white;
+            box-shadow: 0 4px 6px rgba(16, 185, 129, 0.25);
+        }
+
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(16, 185, 129, 0.3);
         }
 
         .mobile-menu-btn {
@@ -892,95 +890,10 @@
 
         .project-links {
             display: flex;
-            gap: 10px;
-            align-items: center;
+            flex-direction: column;
+            gap: 12px;
             margin-top: auto;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            padding: 80px 0;
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: var(--border-radius-lg);
-            margin-top: 80px;
-        }
-
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 30px;
-            border-radius: var(--border-radius);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            text-align: center;
-        }
-
-        .testimonial-text {
-            font-size: 16px;
-            color: var(--gray-light);
-            font-style: italic;
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 20px;
-        }
-
-        .author-info h4 {
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-
-        .author-info p {
-            color: var(--gray);
-            font-size: 14px;
-        }
-
-        .slider-controls {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 30px;
-        }
-
-        .slider-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--light);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-
-        .slider-btn:hover {
-            background: var(--primary);
-            transform: scale(1.1);
+            width: 100%;
         }
 
         /* Contact Section */
@@ -1109,6 +1022,8 @@
             justify-content: center;
             gap: 25px;
         }
+
+        /* Logo icon removed from footer */
 
         .footer-links {
             display: flex;
@@ -1267,7 +1182,8 @@
         .modal-links {
             padding: 25px;
             display: flex;
-            gap: 10px;
+            flex-direction: column;
+            gap: 12px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -1418,10 +1334,6 @@
             .modal-links {
                 flex-direction: column;
             }
-
-            .testimonial-card {
-                padding: 20px;
-            }
         }
 
         @media (max-width: 576px) {
@@ -1522,8 +1434,7 @@
         body.light-theme .timeline-content,
         body.light-theme .project-card,
         body.light-theme .stat,
-        body.light-theme .skill-item,
-        body.light-theme .testimonial-card {
+        body.light-theme .skill-item {
             background: rgba(0, 0, 0, 0.03);
             border-color: rgba(0, 0, 0, 0.1);
         }
@@ -1541,31 +1452,70 @@
         body.light-theme .social-badge {
             background: rgba(255, 255, 255, 0.9);
         }
-        /* Logo image styles */
-        .logo-icon {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+
+        /* Visitor Counter */
+        .visitor-counter {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            padding: 10px 15px;
+            font-size: 14px;
+            color: var(--gray-light);
+            z-index: 999;
+            backdrop-filter: blur(10px);
         }
 
-        .logo-img {
-            width: 48px;
-            height: 48px;
-            border-radius: 8px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .logo-letters {
-            display: none;
-            font-weight: 700;
+        /* Project Favorites */
+        .favorite-btn {
+            background: transparent;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
             font-size: 18px;
-            color: var(--light);
+            transition: var(--transition);
+            margin-left: auto;
         }
 
-        @media (max-width: 768px) {
-            .logo-img { width: 40px; height: 40px; }
-            .logo-letters { font-size: 16px; }
+        .favorite-btn:hover {
+            color: var(--warning);
+        }
+
+        .favorite-btn.favorited {
+            color: var(--warning);
+        }
+
+        /* Project Filters */
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            color: var(--gray-light);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 14px;
+        }
+
+        .filter-btn:hover {
+            background: rgba(124, 58, 237, 0.1);
+            color: var(--primary-light);
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
         }
     </style>
 </head>
@@ -1579,15 +1529,17 @@
     <!-- Progress Bar -->
     <div class="progress-bar" id="progressBar"></div>
 
+    <!-- Visitor Counter -->
+    <div class="visitor-counter" id="visitorCounter">
+        <i class="fas fa-eye"></i> <span id="visitCount">0</span> visits
+    </div>
+
     <!-- Header -->
     <header id="mainHeader">
         <div class="container">
             <div class="header-content">
+                <!-- Logo without icon -->
                 <div class="logo">
-                    <div class="logo-icon">
-                        <img src="assets/logo.png" alt="Justin Marc logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-                        <span class="logo-letters">JD</span>
-                    </div>
                     <div class="logo-text">
                         <h1>Justin Marc D. Datinguinoo</h1>
                         <p>Web Developer</p>
@@ -1647,11 +1599,10 @@
                     
                     <div class="skills">
                         <div class="skill">HTML</div>
-                        <div class="skill">CSS / SCSS</div>
-                        <div class="skill">JavaScript (ES6+)</div>
-                        <div class="skill">React</div>
-                        <div class="skill">Node.js</div>
-                        <div class="skill">Git & GitHub</div>
+                        <div class="skill">CSS</div>
+                        <div class="skill">JavaScript</div>
+                        <div class="skill">Python</div>
+                        <div class="skill">LocalStorage</div>
                         <div class="skill">Responsive Design</div>
                         <div class="skill">UI/UX Design</div>
                     </div>
@@ -1683,20 +1634,10 @@
                 
                 <div class="about-stats fade-in">
                     <div class="stat">
-                        <div class="stat-number">10+</div>
+                        <div class="stat-number">3</div>
                         <div class="stat-label">Projects Completed</div>
                     </div>
-                    <div class="stat">
-                        <div class="stat-number">3+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Client Satisfaction</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Technologies Used</div>
+                   
                     </div>
                 </div>
             </div>
@@ -1727,7 +1668,7 @@
                     
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span class="skill-name">React</span>
+                            <span class="skill-name">Python</span>
                             <span class="skill-percent">85%</span>
                         </div>
                         <div class="skill-bar">
@@ -1737,27 +1678,7 @@
                     
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span class="skill-name">Node.js</span>
-                            <span class="skill-percent">80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">UI/UX Design</span>
-                            <span class="skill-percent">85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="85"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span class="skill-name">Git & Version Control</span>
+                            <span class="skill-name">LocalStorage</span>
                             <span class="skill-percent">90%</span>
                         </div>
                         <div class="skill-bar">
@@ -1801,7 +1722,7 @@
                     <div class="timeline-content">
                         <h3>Web Development Student</h3>
                         <div class="company">Advanced Web Technologies Course</div>
-                        <p>Completed comprehensive coursework in modern web technologies including HTML5, CSS3, JavaScript (ES6+), React.js, Node.js, and responsive design principles. Built multiple portfolio projects demonstrating proficiency across the stack.</p>
+                        <p>Completed comprehensive coursework in modern web technologies including HTML5, CSS3, JavaScript (ES6+), and responsive design principles. Built multiple portfolio projects demonstrating proficiency across the stack.</p>
                     </div>
                 </div>
             </div>
@@ -1816,85 +1737,107 @@
                 <p>A selection of my recent work and personal projects</p>
             </div>
             
+            <!-- Project Filters -->
+            <div class="project-filters fade-in">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="favorites">Favorites</button>
+                <button class="filter-btn" data-filter="html">HTML/CSS</button>
+                <button class="filter-btn" data-filter="js">JavaScript</button>
+            </div>
+            
             <div class="projects-grid">
-                <div class="project-card fade-in">
+                <!-- Cake Ordering System Project -->
+                <div class="project-card fade-in" data-category="html js">
                     <div class="project-image">
                         <img src="assets/cake.png" alt="Cake Ordering System" onerror="this.parentElement.innerHTML='Cake Ordering System'">
                     </div>
                     <div class="project-content">
-                        <h3>Cake Ordering System</h3>
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <h3 style="margin: 0;">Cake Ordering System</h3>
+                            <button class="favorite-btn" data-project="cake">
+                                <i class="far fa-star"></i>
+                            </button>
+                        </div>
                         <p>A comprehensive cake ordering platform with customer portal, admin dashboard, and real-time order tracking. Features include user authentication, product management, shopping cart, and payment integration.</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">LocalStorage</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://cake-system.vercel.app/" class="btn btn-outline" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
                             <button class="btn btn-primary view-project" data-project="cake">
-                                <i class="fas fa-info-circle"></i> Details
+                                <i class="fas fa-info-circle"></i> Project Details
                             </button>
+                            <a href="https://github.com/23-44078/cake.git" class="btn btn-outline" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="project-card fade-in">
+                <!-- Mabini Tourist Spot Project -->
+                <div class="project-card fade-in" data-category="html js">
                     <div class="project-image">
                         <img src="assets/mabini.png" alt="Mabini Tourist Spot" onerror="this.parentElement.innerHTML='Mabini Tourist Spot'">
                     </div>
                     <div class="project-content">
-                        <h3>Mabini Tourist Spot</h3>
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <h3 style="margin: 0;">Mabini Tourist Spot</h3>
+                            <button class="favorite-btn" data-project="mabini">
+                                <i class="far fa-star"></i>
+                            </button>
+                        </div>
                         <p>A responsive website showcasing tourist destinations in Mabini, Batangas. Features include interactive maps, image galleries, activity booking system, and comprehensive visitor information.</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Google Maps API</span>
+                            <span class="tech-tag">LocalStorage</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://mabini-tourist-spot-nine.vercel.app/" class="btn btn-outline" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
                             <button class="btn btn-primary view-project" data-project="mabini">
-                                <i class="fas fa-info-circle"></i> Details
+                                <i class="fas fa-info-circle"></i> Project Details
                             </button>
+                            <a href="https://github.com/23-44078/mabini-tourist-spot-.git" class="btn btn-outline" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="project-card fade-in">
+                <!-- Anglers E-commerce Project -->
+                <div class="project-card fade-in" data-category="html js">
                     <div class="project-image">
                         <img src="assets/anglers.png" alt="Anglers E-commerce" onerror="this.parentElement.innerHTML='Anglers E-commerce'">
                     </div>
                     <div class="project-content">
-                        <h3>Anglers E-commerce</h3>
+                        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                            <h3 style="margin: 0;">Anglers E-commerce</h3>
+                            <button class="favorite-btn" data-project="anglers">
+                                <i class="far fa-star"></i>
+                            </button>
+                        </div>
                         <p>Modern e-commerce platform for fishing equipment with product catalog, advanced filtering, shopping cart, and secure checkout. Features include user reviews, wishlist functionality, and order tracking.</p>
                         <div class="project-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">LocalStorage</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://anglers-eta.vercel.app/" class="btn btn-outline" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
                             <button class="btn btn-primary view-project" data-project="anglers">
-                                <i class="fas fa-info-circle"></i> Details
+                                <i class="fas fa-info-circle"></i> Project Details
                             </button>
+                            <a href="https://github.com/23-44078/anglers.git" class="btn btn-outline" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Testimonials removed -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -2001,11 +1944,8 @@
     <footer>
         <div class="container">
             <div class="footer-content">
+                <!-- Footer without logo icon -->
                 <div class="logo">
-                    <div class="logo-icon">
-                        <img src="assets/logo.png" alt="Justin Marc logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-                        <span class="logo-letters">JD</span>
-                    </div>
                     <div class="logo-text">
                         <h1>Justin Marc D. Datinguinoo</h1>
                         <p>Web Developer & Designer</p>
@@ -2022,7 +1962,7 @@
                 </div>
                 
                 <div class="copyright">
-                    &copy; 2024 Justin Marc D. Datinguinoo. All rights reserved.
+                    &copy; <span id="currentYear"></span> Justin Marc D. Datinguinoo. All rights reserved.
                 </div>
             </div>
         </div>
@@ -2032,8 +1972,6 @@
     <a href="#home" class="back-to-top" id="backToTop">
         <i class="fas fa-chevron-up"></i>
     </a>
-
-    <!-- Theme toggle removed -->
 
     <!-- Project Modal -->
     <div class="modal-backdrop" id="modalBackdrop">
@@ -2047,11 +1985,11 @@
             </header>
             <div id="modalDesc">Project description</div>
             <div class="modal-links">
-                <a class="btn btn-primary" id="modalLiveDemo" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> Live Demo
-                </a>
                 <a class="btn btn-outline" id="modalOpenRepo" target="_blank">
-                    <i class="fab fa-github"></i> View Code
+                    <i class="fab fa-github"></i> View Code on GitHub
+                </a>
+                <a class="btn btn-success" id="modalLiveDemo" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> View Live Demo
                 </a>
             </div>
         </div>
@@ -2117,6 +2055,22 @@
         });
 
         function initializePortfolio() {
+            // Set current year in copyright
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Track visitor count using LocalStorage
+            const visitCountElement = document.getElementById('visitCount');
+            let visitCount = localStorage.getItem('portfolioVisitCount');
+            
+            if (!visitCount) {
+                visitCount = 1;
+            } else {
+                visitCount = parseInt(visitCount) + 1;
+            }
+            
+            localStorage.setItem('portfolioVisitCount', visitCount);
+            visitCountElement.textContent = visitCount;
+            
             // Mobile Menu Toggle
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const mainNav = document.getElementById('mainNav');
@@ -2236,8 +2190,8 @@
             // Typing animation
             const typingText = document.getElementById('typingText');
             const messages = [
-                "I build responsive, accessible web apps using modern technologies.",
-                "I specialize in clean UI, good performance, and turning designs into reliable applications.",
+                "I build responsive, accessible web apps using HTML, CSS, and JavaScript.",
+                "I specialize in clean UI, good performance, and LocalStorage integration.",
                 "Let's create something amazing together!"
             ];
             
@@ -2276,38 +2230,108 @@
             // Start typing animation
             setTimeout(typeWriter, 1000);
             
+            // Project Data with Live Demo Links (NOW INSIDE MODAL)
+            const projectData = {
+                'cake': {
+                    title: 'Cake Ordering System',
+                    desc: 'A comprehensive cake ordering platform built with HTML, CSS, JavaScript, and LocalStorage. The system includes user authentication, product management, shopping cart functionality, and order tracking. All data is stored locally using LocalStorage, demonstrating client-side data persistence without requiring a backend server.',
+                    tech: 'HTML, CSS, JavaScript, LocalStorage',
+                    repo: 'https://github.com/23-44078/cake.git',
+                    demo: 'https://cake-system.vercel.app/'
+                },
+                'mabini': {
+                    title: 'Mabini Tourist Spot',
+                    desc: 'A responsive tourism website showcasing destinations in Mabini, Batangas. Built with pure HTML, CSS, and JavaScript with LocalStorage integration for saving user preferences, favorite locations, and visit history. Features include interactive maps, image galleries, and a booking system that stores data locally.',
+                    tech: 'HTML, CSS, JavaScript, LocalStorage',
+                    repo: 'https://github.com/23-44078/mabini-tourist-spot-.git',
+                    demo: 'https://mabini-tourist-spot-nine.vercel.app/'
+                },
+                'anglers': {
+                    title: 'Anglers E-commerce',
+                    desc: 'Modern e-commerce platform for fishing equipment using HTML, CSS, JavaScript, and LocalStorage. Implements a complete shopping experience with product catalog, shopping cart, wishlist, and order management. All cart data and user preferences are stored locally for persistence across sessions.',
+                    tech: 'HTML, CSS, JavaScript, LocalStorage',
+                    repo: 'https://github.com/23-44078/anglers.git',
+                    demo: 'https://anglers-eta.vercel.app/'
+                }
+            };
+            
+            // Project Favorites using LocalStorage
+            const favoriteButtons = document.querySelectorAll('.favorite-btn');
+            const favorites = JSON.parse(localStorage.getItem('projectFavorites')) || {};
+            
+            // Initialize favorite buttons
+            favoriteButtons.forEach(button => {
+                const projectId = button.getAttribute('data-project');
+                const icon = button.querySelector('i');
+                
+                if (favorites[projectId]) {
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                    button.classList.add('favorited');
+                }
+                
+                button.addEventListener('click', () => {
+                    if (favorites[projectId]) {
+                        // Remove from favorites
+                        favorites[projectId] = false;
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                        button.classList.remove('favorited');
+                    } else {
+                        // Add to favorites
+                        favorites[projectId] = true;
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                        button.classList.add('favorited');
+                    }
+                    
+                    // Save to LocalStorage
+                    localStorage.setItem('projectFavorites', JSON.stringify(favorites));
+                });
+            });
+            
+            // Project Filtering
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    const filter = button.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        const categories = card.getAttribute('data-category');
+                        const projectId = card.querySelector('.favorite-btn').getAttribute('data-project');
+                        
+                        let show = false;
+                        
+                        if (filter === 'all') {
+                            show = true;
+                        } else if (filter === 'favorites') {
+                            show = favorites[projectId] === true;
+                        } else if (filter === 'html') {
+                            show = categories.includes('html');
+                        } else if (filter === 'js') {
+                            show = categories.includes('js');
+                        }
+                        
+                        card.style.display = show ? 'flex' : 'none';
+                    });
+                });
+            });
+            
             // Project Modal
             const modalBackdrop = document.getElementById('modalBackdrop');
             const modalTitle = document.getElementById('modalTitle');
             const modalDesc = document.getElementById('modalDesc');
             const modalTech = document.getElementById('modalTech');
-            const modalLiveDemo = document.getElementById('modalLiveDemo');
             const modalOpenRepo = document.getElementById('modalOpenRepo');
+            const modalLiveDemo = document.getElementById('modalLiveDemo');
             const closeModal = document.getElementById('closeModal');
-            
-            const projectData = {
-                'cake': {
-                    title: 'Cake Ordering System',
-                    desc: 'A comprehensive cake ordering platform designed to provide a seamless experience for customers, staff, and administrators. The system includes three main interfaces: customer portal for browsing and ordering cakes, staff panel for order management, and admin dashboard for inventory and business analytics. Features include user authentication, product catalog with categories, shopping cart with real-time updates, order tracking, payment gateway integration, and responsive design that works perfectly on all devices.',
-                    tech: 'HTML, CSS, JavaScript, PHP, MySQL',
-                    liveDemo: 'https://cake-system.vercel.app/',
-                    repo: 'https://github.com/23-44078/cake.git'
-                },
-                'mabini': {
-                    title: 'Mabini Tourist Spot',
-                    desc: 'A responsive tourism website showcasing beautiful destinations in Mabini, Batangas. The platform provides comprehensive information on attractions like Anilao diving spots, Mt. Gulugod-Baboy hiking trails, and nearby island destinations. Features include interactive Google Maps integration, photo galleries with lightbox functionality, activity booking system, weather information, visitor reviews, and multilingual support. The site is optimized for both desktop and mobile users with fast loading times and intuitive navigation.',
-                    tech: 'HTML, CSS, JavaScript, Google Maps API',
-                    liveDemo: 'https://mabini-tourist-spot-nine.vercel.app/',
-                    repo: 'https://github.com/23-44078/mabini-tourist-spot-.git'
-                },
-                'anglers': {
-                    title: 'Anglers E-commerce',
-                    desc: 'Modern e-commerce platform for fishing enthusiasts featuring a complete online shopping experience. The platform includes product listings with advanced filtering options, detailed product pages with specifications and reviews, shopping cart with quantity adjustments, secure checkout process, user account management, and order history tracking. Built with a mobile-first approach, the site features a clean, intuitive interface with smooth animations and transitions. The backend handles inventory management, user authentication, and order processing.',
-                    tech: 'HTML, CSS, JavaScript, React, Firebase',
-                    liveDemo: 'https://anglers-eta.vercel.app/',
-                    repo: 'https://github.com/23-44078/anglers.git'
-                }
-            };
             
             document.querySelectorAll('.view-project').forEach(button => {
                 button.addEventListener('click', () => {
@@ -2318,8 +2342,15 @@
                         modalTitle.textContent = data.title;
                         modalDesc.textContent = data.desc;
                         modalTech.textContent = data.tech;
-                        modalLiveDemo.href = data.liveDemo;
                         modalOpenRepo.href = data.repo;
+                        
+                        // Set up live demo button (NOW INSIDE MODAL)
+                        if (data.demo) {
+                            modalLiveDemo.href = data.demo;
+                            modalLiveDemo.style.display = 'flex';
+                        } else {
+                            modalLiveDemo.style.display = 'none';
+                        }
                         
                         modalBackdrop.style.display = 'flex';
                         document.body.style.overflow = 'hidden';
@@ -2469,8 +2500,6 @@
                 }
             });
             
-            // Theme toggle removed (UI and JS)
-            
             // Image fallback handling
             document.querySelectorAll('img').forEach(img => {
                 img.addEventListener('error', function() {
@@ -2506,8 +2535,6 @@
                     resumeModal.style.display = 'flex';
                     document.body.style.overflow = 'hidden';
                 }
-                
-                // (keyboard theme toggle removed)
             });
             
             // Add hover effect to project cards
@@ -2541,9 +2568,42 @@
                 observer.observe(el);
             });
             
-            // Add current year to copyright
-            document.querySelector('.copyright').innerHTML = 
-                document.querySelector('.copyright').innerHTML.replace('2024', new Date().getFullYear());
+            // Toast notification for Live Demo in modal
+            modalLiveDemo.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent modal close
+                // This will now open the live demo in new tab when clicked
+                if (!this.href || this.href === '#') {
+                    e.preventDefault();
+                    // Create a simple toast notification
+                    const toast = document.createElement('div');
+                    toast.textContent = 'Live demo coming soon! In the meantime, check out the code on GitHub.';
+                    toast.style.position = 'fixed';
+                    toast.style.bottom = '20px';
+                    toast.style.left = '50%';
+                    toast.style.transform = 'translateX(-50%)';
+                    toast.style.background = 'var(--primary)';
+                    toast.style.color = 'white';
+                    toast.style.padding = '12px 20px';
+                    toast.style.borderRadius = 'var(--border-radius-sm)';
+                    toast.style.zIndex = '9999';
+                    toast.style.boxShadow = 'var(--shadow-lg)';
+                    toast.style.fontSize = '14px';
+                    toast.style.maxWidth = '90%';
+                    toast.style.textAlign = 'center';
+                    
+                    document.body.appendChild(toast);
+                    
+                    setTimeout(() => {
+                        toast.style.opacity = '0';
+                        toast.style.transition = 'opacity 0.5s ease';
+                        setTimeout(() => {
+                            if (toast.parentNode) {
+                                toast.parentNode.removeChild(toast);
+                            }
+                        }, 500);
+                    }, 3000);
+                }
+            });
         }
     </script>
 </body>
